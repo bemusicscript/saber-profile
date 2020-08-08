@@ -1,0 +1,191 @@
+{% load get_filter %}
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1, user-scalable=0">
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@bemusicscript" />
+        <meta property="og:url" content="https://bs.slime.kr" />
+        <meta property="og:title" content="Saber Profile" />
+        <meta property="og:description" content="Make your scoresaber profile card!" />
+        <meta property="og:image" content="https://bs.slime.kr/static/img/user/{{ uid }}.png" />
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+        <link href="{% static 'css/style.css' %}?44" rel="stylesheet">
+        <link href="{% static 'css/percircle.css' %}?43" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/v/bs4/dt-1.10.20/datatables.min.css"/>
+        <script type="text/javascript" src="//cdn.datatables.net/v/bs4/dt-1.10.20/datatables.min.js"></script>
+
+        <script src="https://www.amcharts.com/lib/4/core.js"></script>
+        <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+        <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+
+        <style>
+        #chartdiv {
+            width: 100%;
+            height: 350px;
+        }
+        </style>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171553187-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-171553187-1');
+        </script>
+
+        <title>SABER PROFILE - {{ info.name }}</title>
+    </head>
+
+
+
+    <hr style="width:0;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6 col-lg-3"></div>
+            <div class="col-lg-6 col-lg-offset-1">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-3 col-xs-3 col-lg-12 p-1">
+                            <div class="main-title">
+                                <span class="head">Saber</span>
+                                <span class="tail">Profile</span>
+                            </div>
+                                <div class="main-menu">
+                                <a href="/">Main</a> |
+                                <a href="/tier">Tier</a> |
+                                <a href="/level">Level</a> |
+                                <a href="/about">About</a>
+                            </div>
+                            <div class="input-field first">
+                                <input type="text" id="id_search" placeholder="Scoresaber ID or URL" title="Scoresaber User ID or Profile URL" />
+                                <i class="hovicon mini effect-1 sub-a scoresaber_id_q" data-toggle="modal" data-target="#search_help">
+                                    <b class="icon-question-sign"></b>
+                                </i>
+                            </div>
+
+                            <!-- search help modal -->
+                            <div class="modal fade" id="search_help" tabindex="-1" role="dialog" aria-hidden="true">
+                              <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                  <div class="search_help_body">
+                                      <b class="note"><a href="https://www.notion.so/Saber-Profile-438979e7bb7645e6a3c2adc2e1ab98fa">About Saber Profile</a></b>
+                                      <b class="message">
+                                          Now Available on Oculus!</br></br></br>
+                                          1. Type <a href="https://scoresaber.com/global" target="_blank">Scoresaber</a> Profile URL.</br></br>
+                                          &nbsp;- Just enter your Scoresaber profile URL.</br></br>
+                                          2. Type Your Nickname.</br></br>
+                                          &nbsp;- Enter the nickname registered in Scoresaber.</br></br>
+                                      </b>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="user_not_found">
+                                <span class="warn">User</span>
+                                <span class="warn">Not Found!</span>
+                            </div>
+                        </div>
+                        <div class="loader col-sm-12 col-md-12 col-xs-12 col-lg-12 p-1">
+                            <img class="loader_anim" src="" width="64px" height="64px" align="center" />
+                        </div>
+                        <div class="user_div profile_border">
+                            <div style="padding:10px">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <img class="img" src="#"  width="75px" height="75px" />
+                                        </td>
+                                        <td style="padding-left: 10px;">
+                                            <div class="user">
+                                                <div class="name"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                <hr>
+                <div class="user_detail">
+
+                    <div class="ranking">
+
+                        <div class="row detail_head">
+                            <div class="col rank">
+                                #{{ info.rank.global }}
+                            </div>
+                            <div class="col pp">{{ info.pp.pp }} PP</div>
+                        </div>
+
+                        <div class="detail_title">
+                            <div class="name" id="{{ info.id }}">
+                                <img src="{% static 'img/flag/'%}{{ info.country }}.png" /> {{ info.name }}
+                            </div>
+                            <div class="tier" id="tier_{{ info.tier }}">{{ info.tier_name }}</div>
+                            <div class="profile_img"><img src="{{ info.profile_image }}" /></div>
+                        </div>
+
+                        <div class="rank_graph" history="{{ info.rank.history }},{{ info.rank.global }}">
+                            <div id="chartdiv"></div>
+                        </div>
+                    </div>
+
+                    <div class="experience">
+                        <div class="exp_graphs">
+                            <div id="level_graph" class="red big animate exp_graph" lv="{{ info.level.level }}" exp="{{info.level.exp}}" min="{{info.level.min_exp}}" max="{{info.level.max_exp}}">
+                                <span>
+                                    Level<br>{{ info.level.level }}<br>
+                                    <div class="sub_desc"></div>
+                                </span>
+                            </div>
+                            <div id="pp_graph" class="purple big percircle animate exp_graph" pp="{{info.pp.pp}}" prdct_min_pp="{{info.pp.min_pp}}" prdct_max_pp="{{info.pp.max_pp}}">
+                                <span>
+                                    PP<br>{{ info.pp.pp }}<br>
+                                    <div class="sub_desc">(Top {{ info.rate }}% Player)</div>
+                                </span>
+                            </div>
+                            <div id="acc_graph" data-percent="{{ info.scores.ranked.avg_accuracy }}" class="yellow big percircle animate exp_graph">
+                                <span>
+                                    Accuracy<br>{{ info.scores.ranked.avg_accuracy }}%<br>
+                                </span>
+                            </div>
+                            <div id="count_graph" class="blue big percircle animate exp_graph" ranked="{{ info.scores.ranked.play_count }}" total="{{ info.scores.total.play_count }}">
+                                <span>
+                                    Play Count<br>{{ info.scores.ranked.play_count }}<br>
+                                    <div class="sub_desc">(Total: {{info.scores.total.play_count}})</div>
+                                </span>
+                            </div>
+                        </div>
+
+                </div>
+
+                <div class="profile_div profile_image">
+                    <img src="/static/img/user/{{info.id}}.png" />
+                </div>
+
+                <div class="profile_div icon_tab" id="{{info.id}}">
+                    <i class="hovicon small effect-1 sub-a share twitter_btn"><b class="icon-twitter"></b></i>
+                    <i class="hovicon small effect-1 sub-a share link_copy"><b class="icon-link"></b></i>
+                    <i class="hovicon small effect-1 sub-a share image_save"><b class="icon-save"></b></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="{% static 'js/search.js' %}?4"></script>
+<script src="{% static 'js/percircle.js' %}?3"></script>
+<script src="{% static 'js/user.js' %}?43"></script>
+{% include 'base/footer.html' %}

@@ -1,0 +1,553 @@
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+@font-face {
+    font-family: 'neon_tubes_2regular';
+    src: url('/static/font/neontubes2-webfont.woff2') format('woff2'),
+         url('/static/font/neontubes2-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'notosans_cjkkr_regular';
+  src: url('/static/font/NotoSansCJKkr-Regular.otf');
+}
+
+@font-face {
+  font-family: 'lato_regular';
+  src: url('/static/font/Lato-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'lato_light';
+  src: url('/static/font/Lato-Light.ttf');
+}
+
+@font-face {
+  font-family: 'lato_black';
+  src: url('/static/font/Lato-Black.ttf');
+}
+
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    background: #16212C;
+    font: 13px monospace;
+    color: #FFFFFF;
+}
+body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
+p {
+  margin-top: 30px;
+}
+
+hr {
+    background-color: darkgrey;
+}
+
+/* Main Title */
+.main-title{
+    text-align: center;
+    padding-top: 4rem;
+    padding-bottom: 0.5rem;
+}
+.main-title *{
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    font-family: 'neon_tubes_2regular';
+    font-size: 3rem;
+    font-style: italic;
+    line-height: inherit;
+    letter-spacing: 4px;
+    white-space: nowrap;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+    color: #fff;
+}
+
+.main-title a{
+    text-decoration: none;
+    word-spacing: 0px;
+}
+
+.main-title span.head{
+    text-shadow:
+    0 0 5px #0048ff,
+    0 0 10px #0048ff,
+    0 0 20px #0048ff,
+    0 0 30px #0048ff;
+}
+
+.main-title span.tail{
+    text-shadow:
+    0 0 5px #ffd500,
+    0 0 10px #ffd500,
+    0 0 20px #ffd500,
+    0 0 30px #ffd500;
+}
+
+.main-menu {
+    text-align: center;
+    font-family: 'lato_regular';
+    font-size: 13px;
+    margin-top: 5px;
+    margin-left: 1rem;
+    letter-spacing: 0.5px;
+}
+.main-menu a {
+    color: deepskyblue;
+}
+
+/* Search */
+.input-field {
+    padding-top: 2rem;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.input-field input {
+    height: 60px;
+    width: 60px;
+    border: 0;
+    display: block;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+}
+
+.input-field input.placeholder {
+    color: #888888;
+    font-size: 18px;
+    font-weight: 300;
+    opacity: 1;
+}
+
+.input-field input:-moz-placeholder {
+    color: #888888;
+    font-size: 18px;
+    font-weight: 300;
+    opacity: 1;
+}
+
+.input-field input::-webkit-input-placeholder {
+    color: #888888;
+    font-size: 18px;
+    font-weight: 300;
+    opacity: 1;
+}
+
+.input-field input:hover, .input-field input:focus {
+    color: #ffffff;
+    box-shadow: none;
+    outline: 0;
+}
+
+
+.input-field.first {
+    box-shadow: none;
+    fill: #ccc;
+    outline: 0;
+}
+
+.input-field.first input {
+  padding: 10px 0 10px 60px;
+  border-radius: 30px;
+  transition: width .2s ease-in;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg fill='%23ccc' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3e%3cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3e%3c/svg%3e");
+  background-position: 14px 14px;
+  background-repeat: no-repeat;
+  background-color: rgba(255, 255, 255, 0.1);
+  background-size: 34px 34px;
+}
+
+.input-field.first input:focus {
+  width: 70%;
+  padding-right: 60px;
+}
+
+.input-field.first input.isFocus {
+  width: 70%;
+}
+
+/* loading */
+.loader{ text-align: center;}
+.loader>.loader_anim{ display: none; text-align: center;}
+
+/* Search Result */
+.profile_border {
+    width: 100%;
+    border: 1px solid #aaaaaa;
+    display: none;
+    background: #243442;
+    border-radius: 0.5em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: #FFC107;
+}
+
+.profile_border:hover{
+    border-radius: 5px;
+    background-color: #224466;
+    cursor:pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+.profile_border:hover, .profile_border:hover * {
+    color:white;
+}
+
+.profile_border .img{
+    width: 60px;
+    height: 60px;
+    display: inline;
+    border-radius: 0.8em;
+    vertical-align: middle;
+}
+
+.profile_border .user{
+    width: 100px;
+    display:inline;
+    line-height: 1.6em;
+    vertical-align: middle;
+}
+
+.profile_border .user .name{
+    width: 100px;
+    font-size: 30px;
+    font-weight: bold;
+    display:inline;
+}
+
+.profile_border .user .id{
+    font-size: 10px;
+    font-weight: bold;
+    margin-right: 10px;
+
+    display:inline-flex;
+}
+
+.profile_image img{
+    margin-top: 2rem;
+    width: 60%;
+    margin-bottom: 2rem;
+}
+
+/* Icon */
+.hovicon {
+    display: inline-block;
+    font-size: 45px;
+    line-height: 90px;
+    cursor: pointer;
+    margin: 20px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+    text-decoration: none;
+    z-index: 1;
+    color: #fff;
+}
+.hovicon.small {
+    font-size: 20px;
+    line-height:45px;
+    width:45px;
+    height:45px;
+    margin:7px;
+}
+
+.hovicon.mini {
+    font-size: 15px;
+    line-height:15px;
+    width:15px;
+    height:15px;
+    margin:1px;
+}
+
+.hovicon.auto-width {
+    width: auto;
+    height: auto;
+    padding: 15px;
+}
+.hovicon:after {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    content:'';
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+.hovicon:before {
+    speak: none;
+    font-size: 48px;
+    line-height: 90px;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    display: block;
+    -webkit-font-smoothing: antialiased;
+}
+/* Effect 1 */
+ .hovicon.effect-1 {
+    background: rgba(255, 255, 255, 0.1);
+    -webkit-transition: background 0.2s, color 0.2s;
+    -moz-transition: background 0.2s, color 0.2s;
+    transition: background 0.2s, color 0.2s;
+}
+.hovicon.effect-1:after {
+    top: -7px;
+    left: -7px;
+    padding: 7px;
+    box-shadow: 0 0 0 4px #fff;
+    -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+    -webkit-transform: scale(.8);
+    -moz-transition: -moz-transform 0.2s, opacity 0.2s;
+    -moz-transform: scale(.8);
+    -ms-transform: scale(.8);
+    transition: transform 0.2s, opacity 0.2s;
+    transform: scale(.8);
+    opacity: 0;
+}
+/* Effect 1a */
+ .hovicon.effect-1.sub-a:hover {
+    background: rgba(255, 255, 255, 1);
+    color: #224466;
+}
+.hovicon.effect-1.sub-a:hover i {
+    color: #224466;
+}
+.hovicon.effect-1.sub-a:hover:after {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+}
+
+.hovicon>.icon-twitter,
+.hovicon>.icon-link,
+.hovicon>.icon-save{
+    line-height: inherit;
+}
+
+.profile_div {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.user_not_found {
+    display: none;
+    margin-top: 2rem;
+}
+
+.user_not_found * {
+    display: block;
+    position: relative;
+    text-align: center;
+    font-family: 'neon_tubes_2regular';
+    font-size: 3rem;
+    font-style: italic;
+    line-height: inherit;
+    letter-spacing: 4px;
+    white-space: nowrap;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+    width: 100%;
+    color: #fff;
+
+    text-shadow:
+    0 0 5px #de0000,
+    0 0 10px #de0000,
+    0 0 20px #de0000,
+    0 0 30px #de0000;
+}
+
+.page-footer>.powered {
+    text-align: center;
+    font-size: 8pt;
+    color: #aaaaaa;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+}
+
+.scoresaber_id_q {
+    color: #aaaaaa;
+}
+
+.search_help_body * {
+    display:block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 11pt;
+    color: black;
+}
+.search_help_body {
+    margin: 1rem;
+}
+.search_help_body>.note {
+    font-size: 14pt;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.search_help_body>.note a {
+    font-size: 20pt;
+}
+
+.search_help_body>.message, .search_help_body>.message * {
+    display: inline-block;
+}
+.search_help_body a {
+    color: darkblue;
+}
+
+/* user detail css */
+.user_detail * {
+    font-family: 'lato_regular';
+}
+
+.user_detail>.ranking>.detail_head *,
+.user_detail .ranking .detail_title * {
+    font-family: 'lato_black';
+    font-size: calc(30px + .5vw);
+    margin-bottom: 2rem;
+}
+.user_detail>.ranking>.detail_head .rank * {
+    text-align: left;
+}
+.user_detail>.ranking>.detail_head .rank sub {
+    font-size: calc(10px + .5vw);
+    color: darkturquoise;
+}
+
+.user_detail>.ranking>.detail_head .pp {
+    text-align: right;
+}
+
+.user_detail .ranking .detail_title * {
+    text-align: center;
+    margin-bottom: 0px;
+}
+.user_detail .ranking .detail_title .name {
+    font-size: calc(30px + .5vw);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.user_detail .ranking .detail_title .name img {
+    width: calc(23px + .5vw);
+    margin-right: 5px;
+}
+
+.user_detail .ranking .detail_title .tier{
+    font-size: calc(23px + .5vw);
+    color: black;
+}
+
+#tier_0{ -webkit-text-stroke: 1px rgb(161, 157, 148) }                      /* Unranked */
+#tier_1{ -webkit-text-stroke: 1px rgb(87, 255, 255) }                       /* MASTER OF SABERS */
+#tier_2{ -webkit-text-stroke: 1px rgb(179, 0, 255) }                        /* LEGENDARY */
+#tier_3{ -webkit-text-stroke: 1px rgb(222, 0, 0) }                          /* ??? */
+#tier_4{ -webkit-text-stroke: 1px rgb(255, 0, 220) }                        /* ??? */
+#tier_5{ -webkit-text-stroke: 1px rgb(255, 79, 0) }                         /* ??? */
+#tier_6{ -webkit-text-stroke: 1px rgb(0, 255, 144) }                        /* ??? */
+#tier_7{ -webkit-text-stroke: 1px rgb(213, 168, 255) }                      /* ??? */
+#tier_8{ -webkit-text-stroke: 1px rgb(0, 31, 198) }                         /* ??? */
+#tier_9,#tier_10,#tier_11{ -webkit-text-stroke: 1px rgb(185, 242, 255) }    /* Diamond */
+#tier_12,#tier_13,#tier_14{ -webkit-text-stroke: 1px rgb(11, 191, 74) }     /* Platinum */
+#tier_15,#tier_16,#tier_17{ -webkit-text-stroke: 1px rgb(255, 215, 0) }     /* Gold */
+#tier_18,#tier_19,#tier_20{ -webkit-text-stroke: 1px rgb(192, 192, 192) }   /* Silver */
+#tier_21,#tier_22,#tier_23{ -webkit-text-stroke: 1px rgb(205, 127, 50) }    /* Bronze */
+
+.user_detail .ranking .detail_title .profile_img {
+    margin-top: 1rem;
+}
+.user_detail .ranking .detail_title .profile_img img {
+    border: 3px solid black;
+    border-radius: 20px;
+    width: 186px;
+}
+
+.user_detail .ranking .rank_graph {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* level */
+.experience {
+}
+.experience .level {
+    font-size: calc(23px + .5vw);
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.experience .level_graph {
+    float: right;
+    display: block;
+}
+.experience .level .level_q{
+    vertical-align: top;
+}
+
+.experience .scores p,
+.experience .acc p,
+.experience .count p{
+    font-family: 'lato_black';
+    font-size: calc(16px + .5vw);
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+.experience * .score{
+    font-family: 'lato_regular';
+    font-size: calc(8px + .5vw);
+    margin-top: 5px;
+    margin-left: 1rem;
+}
+.exp_graphs {
+    width: 100%;
+    text-align: center;
+}
+.exp_graph{
+    display: inline-block;
+
+}
+
+
+/* tier page */
+
+.exp_table * {
+    color: white;
+}
+.exp_table {
+    margin-top: 2rem;
+
+    text-align: center;
+}
+
+.main_desc {
+    margin-top: 1.5rem;
+    font-size: 14px;
+    text-align: center;
+    color: ghostwhite;
+}
+.main_desc p{
+    margin-bottom: 1rem;
+}
+.main_desc p a{
+    color: deepskyblue;
+}
+a{
+    color: deepskyblue;
+}

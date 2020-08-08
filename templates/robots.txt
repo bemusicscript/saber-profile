@@ -1,0 +1,6 @@
+User-Agent: Twitterbot
+Crawl-delay: 10
+Allow: /$
+
+User-Agent: *
+Disallow: /

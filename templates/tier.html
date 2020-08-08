@@ -1,0 +1,59 @@
+{% include 'base/header.html' %}
+{% load get_filter %}
+{% load static %}
+
+                <div class="container">
+                    <div class="main_desc">Tier is determined by the distribution of users for Performance Point(PP), and the criteria are updated once a day.</div>
+                    <table class="table exp_table table-hover">
+                        <thead class="thead-dark">
+                            <th>Tier</th><th>Grade</th><th>Minimum PP</th>
+                        </thead>
+                        <tbody>
+
+                            <tr><td>MASTER OF SABERS</td><td>-</td><td>?</td></tr>
+
+                            <tr><td>LEGENDARY</td><td>-</td><td>{{tiers.2.min_pp|floatformat:"0"}}</td></tr>
+
+                            <tr><td>GRAND MASTER</td><td>-</td><td>{{tiers.3.min_pp|floatformat:"0"}}</td></tr>
+
+                            <tr><td>MASTER</td><td>-</td><td>{{tiers.4.min_pp|floatformat:"0"}}</td></tr>
+
+                            <tr><td>EXECUTIONER</td><td>-</td><td>{{tiers.5.min_pp|floatformat:"0"}}</td></tr>
+
+                            <tr><td>GLADIATOR</td><td>-</td><td>{{tiers.6.min_pp|floatformat:"0"}}</td></tr>
+
+                            <tr><td>WARRIOR</td><td>-</td><td>{{tiers.7.min_pp|floatformat:"0"}}</td></tr>
+
+                            <tr><td>BLADER</td><td>-</td><td>{{tiers.8.min_pp|floatformat:"0"}}</td></tr>
+
+                            <tr><td rowspan="3">Diamond</td><td>I</td><td>{{tiers.9.min_pp|floatformat:"0"}}</td></tr>
+                            <tr><td>II</td><td>{{tiers.10.min_pp|floatformat:"0"}}</td></tr>
+                            <tr><td>III</td><td>{{tiers.11.min_pp|floatformat:"0"}}</td></tr>
+
+                            <tr><td rowspan="3">Platinum</td><td>I</td><td>{{tiers.12.min_pp|floatformat:"0"}}</td></tr>
+                            <tr><td>II</td><td>{{tiers.13.min_pp|floatformat:"0"}}</td></tr>
+                            <tr><td>III</td><td>{{tiers.14.min_pp|floatformat:"0"}}</td></tr>
+
+                            <tr><td rowspan="3">Gold</td><td>I</td><td>{{tiers.15.min_pp|floatformat:"0"}}</td></tr>
+                            <tr><td>II</td><td>{{tiers.16.min_pp|floatformat:"0"}}</td></tr>
+                            <tr><td>III</td><td>{{tiers.17.min_pp|floatformat:"0"}}</td></tr>
+
+                            <tr><td rowspan="3">Silver</td><td>I</td><td>{{tiers.18.min_pp|floatformat:"0"}}</td></tr>
+                            <tr><td>II</td><td>{{tiers.19.min_pp|floatformat:"0"}}</td></tr>
+                            <tr><td>III</td><td>{{tiers.20.min_pp|floatformat:"0"}}</td></tr>
+
+                            <tr><td rowspan="3">Bronze</td><td>I</td><td>{{tiers.21.min_pp|floatformat:"0"}}</td></tr>
+                            <tr><td>II</td><td>{{tiers.22.min_pp|floatformat:"0"}}</td></tr>
+                            <tr><td>III</td><td>{{tiers.23.min_pp|floatformat:"0"}}</td></tr>
+
+                            <tr><td>Unranked</td><td>-</td><td>0</td></tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% include 'base/footer.html' %}

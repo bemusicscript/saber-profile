@@ -1,0 +1,67 @@
+{% load static %}
+{% include 'base/header.html' %}
+{% load get_filter %}
+{% load static %}
+
+                            <div class="input-field first">
+                                <input type="text" id="id_search" placeholder="Scoresaber ID or URL" title="Scoresaber User ID or Profile URL" />
+                                <i class="hovicon mini effect-1 sub-a scoresaber_id_q" data-toggle="modal" data-target="#search_help">
+                                    <b class="icon-question-sign"></b>
+                                </i>
+                            </div>
+
+                            <!-- search help modal -->
+                            <div class="modal fade" id="search_help" tabindex="-1" role="dialog" aria-hidden="true">
+                              <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                  <div class="search_help_body">
+                                      <b class="note"><a href="https://www.notion.so/Saber-Profile-438979e7bb7645e6a3c2adc2e1ab98fa">About Saber Profile</a></b>
+                                      <b class="message">
+                                          Now Available on Oculus!</br></br></br>
+                                          1. Type <a href="https://scoresaber.com/global" target="_blank">Scoresaber</a> Profile URL.</br></br>
+                                          &nbsp;- Just enter your Scoresaber profile URL.</br></br>
+                                          2. Type Your Nickname.</br></br>
+                                          &nbsp;- Enter the nickname registered in Scoresaber.</br></br>
+                                      </b>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="profile_div profile_image"></div>
+                            <div class="user_not_found">
+                                <span class="warn">User</span>
+                                <span class="warn">Not Found!</span>
+                            </div>
+
+                        </div>
+                        <div class="loader col-sm-12 col-md-12 col-xs-12 col-lg-12 p-1">
+                            <img class="loader_anim" src="" width="64px" height="64px" align="center" />
+                        </div>
+                        <div class="user_div profile_border">
+                            <div style="padding:10px">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <img class="img" src="#" width="75px" height="75px" />
+                                        </td>
+                                        <td style="padding-left: 10px;">
+                                            <div class="user">
+                                                <div class="name"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        </div>
+                    </div>
+
+                <div class="profile_div icon_tab"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="{% static 'js/search.js' %}?3"></script>
+{% include 'base/footer.html' %}

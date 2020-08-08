@@ -1,0 +1,266 @@
+{
+    "0": {
+        "color": [
+            161,
+            157,
+            148
+        ],
+        "name": "Unranked",
+        "rate": 0,
+        "min_rank": 0,
+        "min_pp": 0
+    },
+    "1": {
+        "color": [
+            87,
+            255,
+            255
+        ],
+        "name": "MASTER OF SABERS",
+        "rate": 0,
+        "min_rank": 3,
+        "min_pp": 0
+    },
+    "2": {
+        "color": [
+            179,
+            0,
+            255
+        ],
+        "name": "LEGENDARY",
+        "rate": 0,
+        "min_rank": 99999,
+        "min_pp": 99999
+    },
+    "3": {
+        "color": [
+            222,
+            0,
+            0
+        ],
+        "name": "GRAND MASTER",
+        "rate": 0,
+        "min_rank": 99999,
+        "min_pp": 99999
+    },
+    "4": {
+        "color": [
+            255,
+            0,
+            220
+        ],
+        "name": "MASTER",
+        "rate": 0,
+        "min_rank": 99999,
+        "min_pp": 99999
+    },
+    "5": {
+        "color": [
+            255,
+            79,
+            0
+        ],
+        "name": "EXECUTIONER",
+        "rate": 0,
+        "min_rank": 99999,
+        "min_pp": 99999
+    },
+    "6": {
+        "color": [
+            0,
+            255,
+            144
+        ],
+        "name": "GLADIATOR",
+        "rate": 0,
+        "min_rank": 99999,
+        "min_pp": 99999
+    },
+    "7": {
+        "color": [
+            213,
+            168,
+            255
+        ],
+        "name": "WARRIOR",
+        "rate": 5.3,
+        "min_rank": 99999,
+        "min_pp": 99999
+    },
+    "8": {
+        "color": [
+            0,
+            31,
+            198
+        ],
+        "name": "BLADER",
+        "rate": 0,
+        "min_rank": 99999,
+        "min_pp": 99999
+    },
+    "9": {
+        "color": [
+            185,
+            242,
+            255
+        ],
+        "name": "Diamond I",
+        "rate": 0,
+        "min_rank": 99999,
+        "min_pp": 99999
+    },
+    "10": {
+        "color": [
+            185,
+            242,
+            255
+        ],
+        "name": "Diamond II",
+        "rate": 0,
+        "min_rank": 99999,
+        "min_pp": 99999
+    },
+    "11": {
+        "color": [
+            185,
+            242,
+            255
+        ],
+        "name": "Diamond III",
+        "rate": 0,
+        "min_rank": 99999,
+        "min_pp": 99999
+    },
+    "12": {
+        "color": [
+            11,
+            191,
+            74
+        ],
+        "name": "Platinum I",
+        "rate": 0,
+        "min_rank": 99999,
+        "min_pp": 99999
+    },
+    "13": {
+        "color": [
+            11,
+            191,
+            74
+        ],
+        "name": "Platinum II",
+        "rate": 0,
+        "min_rank": 99999,
+        "min_pp": 99999
+    },
+    "14": {
+        "color": [
+            11,
+            191,
+            74
+        ],
+        "name": "Platinum III",
+        "rate": 0,
+        "min_rank": 99999,
+        "min_pp": 99999
+    },
+    "15": {
+        "color": [
+            255,
+            215,
+            0
+        ],
+        "name": "Gold I",
+        "rate": 0,
+        "min_rank": 99999,
+        "min_pp": 99999
+    },
+    "16": {
+        "color": [
+            255,
+            215,
+            0
+        ],
+        "name": "Gold II",
+        "rate": 0,
+        "min_rank": 99999,
+        "min_pp": 99999
+    },
+    "17": {
+        "color": [
+            255,
+            215,
+            0
+        ],
+        "name": "Gold III",
+        "rate": 0,
+        "min_rank": 99999,
+        "min_pp": 99999
+    },
+    "18": {
+        "color": [
+            192,
+            192,
+            192
+        ],
+        "name": "Silver I",
+        "rate": 0,
+        "min_rank": 99999,
+        "min_pp": 99999
+    },
+    "19": {
+        "color": [
+            192,
+            192,
+            192
+        ],
+        "name": "Silver II",
+        "rate": 79.0,
+        "min_rank": 99999,
+        "min_pp": 99999
+    },
+    "20": {
+        "color": [
+            192,
+            192,
+            192
+        ],
+        "name": "Silver III",
+        "rate": 0,
+        "min_rank": 99999,
+        "min_pp": 99999
+    },
+    "21": {
+        "color": [
+            205,
+            127,
+            50
+        ],
+        "name": "Bronze I",
+        "rate": 0,
+        "min_rank": 99999,
+        "min_pp": 99999
+    },
+    "22": {
+        "color": [
+            205,
+            127,
+            50
+        ],
+        "name": "Bronze II",
+        "rate": 0,
+        "min_rank": 99999,
+        "min_pp": 99999
+    },
+    "23": {
+        "color": [
+            205,
+            127,
+            50
+        ],
+        "name": "Bronze III",
+        "rate": 0,
+        "min_rank": 99999,
+        "min_pp": 99999
+    }
+}

@@ -1,0 +1,121 @@
+{% load static %}
+{% include 'base/header.html' %}
+{% load get_filter %}
+{% load static %}
+
+                <div class="container">
+                    <div class="main_desc">Experience Point(Exp.) is increased by a specific formula in proportion to the score for Ranked songs.</div>
+                    <table class="table exp_table table-hover">
+                        <thead class="thead-dark">
+                            <th>Level</th><th>Cumlative Exp.</th><th>Required Exp.</th>
+                        </thead>
+                        <tbody>
+                            <tr><td>1</td><td>0</td><td>0</td></tr>
+                            <tr><td>2</td><td>100000</td><td>100000</td></tr>
+                            <tr><td>3</td><td>220048</td><td>120048</td></tr>
+                            <tr><td>4</td><td>360144</td><td>140096</td></tr>
+                            <tr><td>5</td><td>520288</td><td>160144</td></tr>
+                            <tr><td>6</td><td>700480</td><td>180192</td></tr>
+                            <tr><td>7</td><td>900720</td><td>200240</td></tr>
+                            <tr><td>8</td><td>1121008</td><td>220288</td></tr>
+                            <tr><td>9</td><td>1361344</td><td>240336</td></tr>
+                            <tr><td>10</td><td>1621728</td><td>260384</td></tr>
+                            <tr><td>11</td><td>1922208</td><td>300480</td></tr>
+                            <tr><td>12</td><td>2262784</td><td>340576</td></tr>
+                            <tr><td>13</td><td>2643456</td><td>380672</td></tr>
+                            <tr><td>14</td><td>3064224</td><td>420768</td></tr>
+                            <tr><td>15</td><td>3525088</td><td>460864</td></tr>
+                            <tr><td>16</td><td>4026048</td><td>500960</td></tr>
+                            <tr><td>17</td><td>4567104</td><td>541056</td></tr>
+                            <tr><td>18</td><td>5148256</td><td>581152</td></tr>
+                            <tr><td>19</td><td>5769504</td><td>621248</td></tr>
+                            <tr><td>20</td><td>6430848</td><td>661344</td></tr>
+                            <tr><td>21</td><td>7172384</td><td>741536</td></tr>
+                            <tr><td>22</td><td>7994112</td><td>821728</td></tr>
+                            <tr><td>23</td><td>8896032</td><td>901920</td></tr>
+                            <tr><td>24</td><td>9878144</td><td>982112</td></tr>
+                            <tr><td>25</td><td>10940448</td><td>1062304</td></tr>
+                            <tr><td>26</td><td>12082944</td><td>1142496</td></tr>
+                            <tr><td>27</td><td>13305632</td><td>1222688</td></tr>
+                            <tr><td>28</td><td>14608512</td><td>1302880</td></tr>
+                            <tr><td>29</td><td>15991584</td><td>1383072</td></tr>
+                            <tr><td>30</td><td>17454848</td><td>1463264</td></tr>
+                            <tr><td>31</td><td>19078496</td><td>1623648</td></tr>
+                            <tr><td>32</td><td>20862528</td><td>1784032</td></tr>
+                            <tr><td>33</td><td>22806944</td><td>1944416</td></tr>
+                            <tr><td>34</td><td>24911744</td><td>2104800</td></tr>
+                            <tr><td>35</td><td>27176928</td><td>2265184</td></tr>
+                            <tr><td>36</td><td>29602496</td><td>2425568</td></tr>
+                            <tr><td>37</td><td>32188448</td><td>2585952</td></tr>
+                            <tr><td>38</td><td>34934784</td><td>2746336</td></tr>
+                            <tr><td>39</td><td>37841504</td><td>2906720</td></tr>
+                            <tr><td>40</td><td>40908608</td><td>3067104</td></tr>
+                            <tr><td>41</td><td>44296480</td><td>3387872</td></tr>
+                            <tr><td>42</td><td>48005120</td><td>3708640</td></tr>
+                            <tr><td>43</td><td>52034528</td><td>4029408</td></tr>
+                            <tr><td>44</td><td>56384704</td><td>4350176</td></tr>
+                            <tr><td>45</td><td>61055648</td><td>4670944</td></tr>
+                            <tr><td>46</td><td>66047360</td><td>4991712</td></tr>
+                            <tr><td>47</td><td>71359840</td><td>5312480</td></tr>
+                            <tr><td>48</td><td>76993088</td><td>5633248</td></tr>
+                            <tr><td>49</td><td>82947104</td><td>5954016</td></tr>
+                            <tr><td>50</td><td>89221888</td><td>6274784</td></tr>
+                            <tr><td>51</td><td>96138208</td><td>6916320</td></tr>
+                            <tr><td>52</td><td>103696064</td><td>7557856</td></tr>
+                            <tr><td>53</td><td>111895456</td><td>8199392</td></tr>
+                            <tr><td>54</td><td>120736384</td><td>8840928</td></tr>
+                            <tr><td>55</td><td>130218848</td><td>9482464</td></tr>
+                            <tr><td>56</td><td>140342848</td><td>10124000</td></tr>
+                            <tr><td>57</td><td>151108384</td><td>10765536</td></tr>
+                            <tr><td>58</td><td>162515456</td><td>11407072</td></tr>
+                            <tr><td>59</td><td>174564064</td><td>12048608</td></tr>
+                            <tr><td>60</td><td>187254208</td><td>12690144</td></tr>
+                            <tr><td>61</td><td>201227424</td><td>13973216</td></tr>
+                            <tr><td>62</td><td>216483712</td><td>15256288</td></tr>
+                            <tr><td>63</td><td>233023072</td><td>16539360</td></tr>
+                            <tr><td>64</td><td>250845504</td><td>17822432</td></tr>
+                            <tr><td>65</td><td>269951008</td><td>19105504</td></tr>
+                            <tr><td>66</td><td>290339584</td><td>20388576</td></tr>
+                            <tr><td>67</td><td>312011232</td><td>21671648</td></tr>
+                            <tr><td>68</td><td>334965952</td><td>22954720</td></tr>
+                            <tr><td>69</td><td>359203744</td><td>24237792</td></tr>
+                            <tr><td>70</td><td>384724608</td><td>25520864</td></tr>
+                            <tr><td>71</td><td>412811616</td><td>28087008</td></tr>
+                            <tr><td>72</td><td>443464768</td><td>30653152</td></tr>
+                            <tr><td>73</td><td>476684064</td><td>33219296</td></tr>
+                            <tr><td>74</td><td>512469504</td><td>35785440</td></tr>
+                            <tr><td>75</td><td>550821088</td><td>38351584</td></tr>
+                            <tr><td>76</td><td>591738816</td><td>40917728</td></tr>
+                            <tr><td>77</td><td>635222688</td><td>43483872</td></tr>
+                            <tr><td>78</td><td>681272704</td><td>46050016</td></tr>
+                            <tr><td>79</td><td>729888864</td><td>48616160</td></tr>
+                            <tr><td>80</td><td>781071168</td><td>51182304</td></tr>
+                            <tr><td>81</td><td>837385760</td><td>56314592</td></tr>
+                            <tr><td>82</td><td>898832640</td><td>61446880</td></tr>
+                            <tr><td>83</td><td>965411808</td><td>66579168</td></tr>
+                            <tr><td>84</td><td>1037123264</td><td>71711456</td></tr>
+                            <tr><td>85</td><td>1113967008</td><td>76843744</td></tr>
+                            <tr><td>86</td><td>1195943040</td><td>81976032</td></tr>
+                            <tr><td>87</td><td>1283051360</td><td>87108320</td></tr>
+                            <tr><td>88</td><td>1375291968</td><td>92240608</td></tr>
+                            <tr><td>89</td><td>1472664864</td><td>97372896</td></tr>
+                            <tr><td>90</td><td>1575170048</td><td>102505184</td></tr>
+                            <tr><td>91</td><td>1687939808</td><td>112769760</td></tr>
+                            <tr><td>92</td><td>1810974144</td><td>123034336</td></tr>
+                            <tr><td>93</td><td>1944273056</td><td>133298912</td></tr>
+                            <tr><td>94</td><td>2087836544</td><td>143563488</td></tr>
+                            <tr><td>95</td><td>2241664608</td><td>153828064</td></tr>
+                            <tr><td>96</td><td>2405757248</td><td>164092640</td></tr>
+                            <tr><td>97</td><td>2580114464</td><td>174357216</td></tr>
+                            <tr><td>98</td><td>2764736256</td><td>184621792</td></tr>
+                            <tr><td>99</td><td>2959622624</td><td>194886368</td></tr>
+                            <tr><td>100</td><td>3164773568</td><td>205150944</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% include 'base/footer.html' %}

@@ -1,0 +1,52 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1, user-scalable=0">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:url" content="https://bs.slime.kr" />
+    <meta property="og:title" content="Saber Profile" />
+    <meta property="og:description" content="Make your scoresaber profile card!" />
+    <meta property="og:image" content="https://bs.slime.kr/static/img/saber_profile_og.png" />
+    <link href="{% static 'css/bootstrap.min.css' %}?66" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/v/bs4/dt-1.10.20/datatables.min.css"/>
+    <script type="text/javascript" src="//cdn.datatables.net/v/bs4/dt-1.10.20/datatables.min.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171553187-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'UA-171553187-1');
+    </script>
+
+    <title>SABER PROFILE</title>
+</head>
+<body>
+
+    <hr style="width:0;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4"></div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-lg-offset-2">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12 p-1">
+                            <div class="main-title">
+                                <span class="head">Saber</span>
+                                <span class="tail">Profile</span>
+                            </div>
+                            <div class="main-menu">
+                                <a href="/">Main</a> |
+                                <a href="/tier">Tier</a> |
+                                <a href="/level">Level</a> |
+                                <a href="/about">About</a>
+                            </div>
