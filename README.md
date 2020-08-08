@@ -1,7 +1,5 @@
 # Saber Profile
 
-![header](/static/img/saber_profile_ban.png)
-
 https://bs.slime.kr
 
 based on scoresaber service, it provides tier grant and card profile creation for users.
